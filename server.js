@@ -31,7 +31,8 @@ app.use('/api/portfolio-list', require('./routes/api/portfolioList'));
 app.use('/api/stocks', require('./routes/api/stocks'));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  // Send a generic response for all routes
+  res.send('Hello, world! This is a generic response for all routes.');
 });
 
 app.listen(port, function() {
